@@ -1,0 +1,53 @@
+Started by user [8mha:////4FqnjakiXvjt7TpXH8tcGgdij1rI8ENxkyABwrNK7y49AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgZ+/dLi1CJ9oDlFxRl5qZUAG5L+L8QAAAA=[0mAditi Varshney
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Jmeter
+using credential Aditi
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:KnoldusInc/Test-Automation.git # timeout=10
+Fetching upstream changes from git@github.com:KnoldusInc/Test-Automation.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:KnoldusInc/Test-Automation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse Feature/Issue4^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/Feature/Issue4^{commit} # timeout=10
+Checking out Revision 9eed9582ba2f2929deee0af8d3eda46aac01e1a9 (refs/remotes/origin/Feature/Issue4)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9eed9582ba2f2929deee0af8d3eda46aac01e1a9 # timeout=10
+Commit message: "Update jmx  file name"
+First time build. Skipping changelog.
+[Jmeter] $ /bin/sh -xe /tmp/jenkins16844950404502897605.sh
++ echo /home/aditi/Downloads/chromedriver_linux64/chromedriver
+/home/aditi/Downloads/chromedriver_linux64/chromedriver
++ cp /var/lib/jenkins/workspace/Jmeter/JmeterSeleniumProject.jar /home/aditi/apache-jmeter-5.3/lib/junit
++ echo copied
+copied
++ cd /home/aditi/apache-jmeter-5.3/bin
++ sh jmeter.sh -Jjmeter.save.saveservice.output_format=csv -JThread=1 -JRamp=10 -JDriverPath=/home/aditi/Downloads/chromedriver_linux64/chromedriver -n -t /var/lib/jenkins/workspace/Jmeter/SeleniumIntegration.jmc -l /var/lib/jenkins/workspace/Jmeter/31/Report/test.jtl -e -o /var/lib/jenkins/workspace/Jmeter/31
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/home/aditi/apache-jmeter-5.3/lib/xstream-1.4.11.1.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Creating summariser <summary>
+Created the tree successfully using /var/lib/jenkins/workspace/Jmeter/SeleniumIntegration.jmc
+Starting standalone test @ Wed Aug 26 16:26:13 IST 2020 (1598439373700)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+Warning: Nashorn engine is planned to be removed from a future JDK release
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 9786
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+summary =      0 in 00:00:00 = ******/s Avg:     0 Min: 9223372036854775807 Max: -9223372036854775808 Err:     0 (0.00%)
+Tidying up ...    @ Wed Aug 26 16:26:14 IST 2020 (1598439374725)
+Error generating the report: java.lang.NullPointerException
+... end of run
+Creating parser with percentiles:'0,50,90,100,' filterRegex:
+Performance: Recording JMeterCsv reports '/var/lib/jenkins/jobs/Jmeter/builds/31/temp/test.jtl'
+Performance: JMeterCsv copying reports to master, files '[/var/lib/jenkins/jobs/Jmeter/builds/31/temp/test.jtl]'
+Performance: JMeterCsv parsing local reports '[/var/lib/jenkins/jobs/Jmeter/builds/31/performance-reports/JMeterCSV/test.jtl]'
+Performance: Parsing report file '/var/lib/jenkins/jobs/Jmeter/builds/31/performance-reports/JMeterCSV/test.jtl' with filterRegex ''.
+Performance: No threshold configured for making the test unstable
+Performance: No threshold configured for making the test failure
+Performance: File test.jtl reported 0.0% of errors [SUCCESS]. Build status is: SUCCESS
+Finished: SUCCESS
